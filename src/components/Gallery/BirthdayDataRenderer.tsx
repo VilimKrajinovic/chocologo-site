@@ -4,31 +4,23 @@ import Gallery from "./Gallery"
 
 const BrithdayDataRenderer = props => {
   const data = useStaticQuery(graphql`
-    query ImageQuery {
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-          dir: { regex: "/birthdays/" }
-        }
-      ) {
-        edges {
-          node {
-            id
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                base64
-                src
-                srcSet
-              }
-            }
-          }
+query AllImagesQuery {
+  allFile(
+    filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, dir: {regex: "/birthdays/"}}
+  ) {
+    edges {
+      node {
+        childImageSharp {
+          gatsbyImageData
         }
       }
     }
+  }
+}
   `)
   return (
     <>
-      <Gallery data={data}></Gallery>
+      <Gallery data={data}/>
     </>
   )
 }

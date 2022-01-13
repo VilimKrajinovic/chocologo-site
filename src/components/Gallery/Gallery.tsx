@@ -1,4 +1,4 @@
-import {GatsbyImage, getImage} from "gatsby-plugin-image"
+import {GatsbyImage, getImage, StaticImage} from "gatsby-plugin-image"
 import * as React from "react"
 import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
@@ -23,8 +23,7 @@ const StyledContainer = styled(Container)`
 `
 
 const GalleryImage = props => {
-    const image = getImage(props.fluid);
-    debugger;
+  const image = getImage(props.imageData)
   return <StyledImg image={image} alt="image"/>
 }
 
@@ -37,7 +36,7 @@ const Gallery = props => {
             return (
               <Col md={"auto"} sm={"auto"} xs={"auto"} key={index}>
                 <GalleryImage
-                  fluid={edge.node}
+                  imageData={edge.node}
                   key={index}
                 />
               </Col>
