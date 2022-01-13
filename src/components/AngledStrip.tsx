@@ -31,16 +31,17 @@ const Content = styled.div`
 
 const Title = styled.h2`
 
+font-size: 80px;
 font-weight: normal;
+font-family: Moonflower;
+margin: 20px auto ${props => props.hasDescription ? "0px" : "5rem"} auto;
 color: ${props => props.theme.typography.strips.color};
-margin: 0;
-
 `;
 
 const Description = styled.p`
   white-space: pre-wrap;
   width: 80%;
-  margin: 5% auto 5rem;
+  margin: 20px auto 5rem auto;
   color: ${props => props.theme.typography.strips.color};
 `;
 
@@ -58,7 +59,7 @@ class AngledStrip extends React.Component<AngledStripProps> {
                         <Strip>
                             <UnSkew>
                                 <Content>
-                                    <Title>
+                                    <Title hasDescription={this.props.description !== ""}>
                                         {this.props.title}
                                     </Title>
                                     <Description>

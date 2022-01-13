@@ -3,6 +3,8 @@ import { createGlobalStyle } from "styled-components"
 import Lato from "../static/fonts/Lato-LightItalic.ttf"
 import Raleway from "../static/fonts/Raleway-Regular.ttf"
 import Riesling from "../static/fonts/Riesling.ttf"
+import Lobster from "../static/fonts/Lobster.otf"
+import Moonfower from "../static/fonts/MoonFlower.ttf"
 
 const theme = {
   typography: {
@@ -79,6 +81,18 @@ font-style: normal;
 font-family: Lato;
 src: url(${Lato}) format('truetype');
 font-style: normal;
+}
+
+@font-face {
+font-family: Lobster;
+src: url(${Lobster}) format('opentype');
+font-style: thin;
+}
+
+@font-face {
+font-family: Moonflower;
+src: url(${Moonfower}) format('truetype');
+font-style: regular;
 }
 
 body{

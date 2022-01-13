@@ -26,7 +26,7 @@ const StyledCol = styled(Col)`
 `
 
 const Index = ({ data }) => {
-  const { t } = useTranslation()
+  const { t: translate } = useTranslation()
   console.log(data);
   return (
       <I18nextProvider i18n={i18n}>
@@ -34,32 +34,32 @@ const Index = ({ data }) => {
         <ThemeProvider theme={theme}>
           <Header
               title="Chocologo"
-              description={t("headerDescription")}
+              description={translate("headerDescription")}
               img={data.headerBackground.childImageSharp.gatsbyImageData.images.fallback.src}
           />
           <AngledStrip
-              title={t("first.title")}
-              description={t("first.description")}
+              title={translate("first.title")}
+              description={translate("first.description")}
           />
 
           <FixedBackground
               img={data.firstFixedBackground.childImageSharp.gatsbyImageData.images.fallback.src}
           >
-            <Caption caption={t("first.floating.badge")} />
+            <Caption caption={translate("first.floating.badge")} />
           </FixedBackground>
 
           <AngledStrip
-              title={t("second.title")}
-              description={t("second.description")}
+              title={translate("second.title")}
+              description={translate("second.description")}
           />
 
           <FixedBackground
               img={data.secondFixedBackground.childImageSharp.gatsbyImageData.images.fallback.src}
           >
-            <Caption caption={t("second.floating.badge")} />
+            <Caption caption={translate("second.floating.badge")} />
           </FixedBackground>
 
-          <AngledStrip title={t("third.title")} description={""} />
+          <AngledStrip title={translate("third.title")} description={""} />
 
           <FixedBackground
               img={data.thirdFixedBackground.childImageSharp.gatsbyImageData.images.fallback.src}

@@ -7,9 +7,9 @@ const MainCaption = styled.span`
   text-align: center;
   color: white;
   width: 100%;
-  font-family: Lato, sans-serif;
-  text-transform: uppercase;
-  font-size: 25px;
+  font-family: Moonflower;
+  text-transform: none;
+  font-size: 50px;
 `
 
 const CaptionWrapper = styled.div`
@@ -26,11 +26,11 @@ const RoundedBox = styled.div`
   );
   border-radius: 20px;
   position: absolute;
-  width: 20rem;
+  width: 15vw;
   left: 100%;
   color: #f7f7f7;
   text-align: center;
-  transform: translate(-50%, 0%);
+  transform: translateY(-50%) translateX(-50%);
   height: auto;
   padding: 10px;
 
